@@ -69,8 +69,26 @@ class CalcTest {
     }
 
     @Test
-    @DisplayName("=")
+    @DisplayName("2 + 3 + 5 - 7 * 3 = -11")
     void t12() {
+        assertThat(Calc.run("2 + 3 + 5 - 7 * 3")).isEqualTo(-11);
+    }
+
+    @Test
+    @DisplayName("4 + 2 - 34 * 2 * -1 = 74")
+    void t13() {
+        assertThat(Calc.run("4 + 2 - 34 * 2 * -1")).isEqualTo(74);
+    }
+
+    @Test
+    @DisplayName("=")
+    void t14() {
+//        assertThat(Calc.run("")).isEqualTo();
+    }
+
+    @Test
+    @DisplayName("=")
+    void t15() {
 //        assertThat(Calc.run("")).isEqualTo();
     }
 }
