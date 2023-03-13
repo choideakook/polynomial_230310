@@ -81,14 +81,50 @@ class CalcTest {
     }
 
     @Test
-    @DisplayName("=")
+    @DisplayName("3 * 2 - 4 * 5 = -12")
     void t14() {
+        assertThat(Calc.run("3 * 2 - 4 * 5")).isEqualTo(-14);
+    }
+
+    @Test
+    @DisplayName("10 / 2 = 5")
+    void t15() {
+        assertThat(Calc.run("10 / 2")).isEqualTo(5);
+    }
+
+    @Test
+    @DisplayName("3 * 2 / 2 = 3")
+    void t16() {
+        assertThat(Calc.run("3 * 2 / 2")).isEqualTo(3);
+    }
+
+    @Test
+    @DisplayName("-10 / 5 * 9 = 18")
+    void t17() {
+        assertThat(Calc.run("-10 / 5 * 9")).isEqualTo(-18);
+    }
+
+    @Test
+    @DisplayName("3 * 2 + 4 - 10 / 5 * 9 - 20 * 4 - 0 = -70")
+    void t18() {
+        assertThat(Calc.run("3 * 2 + 4 - 10 / 5 * 9 - 20 * 4 - 0")).isEqualTo(-88);
+    }
+
+    @Test
+    @DisplayName("2 * (3 + 5)=")
+    void t19() {
 //        assertThat(Calc.run("")).isEqualTo();
     }
 
     @Test
     @DisplayName("=")
-    void t15() {
+    void t20() {
+//        assertThat(Calc.run("")).isEqualTo();
+    }
+
+    @Test
+    @DisplayName("=")
+    void t21() {
 //        assertThat(Calc.run("")).isEqualTo();
     }
 }
