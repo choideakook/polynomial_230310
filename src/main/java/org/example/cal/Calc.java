@@ -25,8 +25,7 @@ public class Calc {
     //-- 괄호 안의 수식 먼저 계산 --//
     private static String token(String exp) {
         StringBuilder sb = new StringBuilder(exp);
-        int first = 0;
-        int last = 0;
+        int first = 0, last = 0;
         String result = "";
 
         for (int i = 0; i < exp.length(); i++) {
