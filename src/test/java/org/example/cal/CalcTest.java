@@ -129,7 +129,45 @@ class CalcTest {
     }
 
     @Test
-    void name() {
+    @DisplayName("30 / (3 - 6 + ((5 + 7))) * 8 = 24")
+    void t22() {
+        assertThat(Calc.run("30 / (3 - 6 + ((5 + 7))) * 8")).isEqualTo(24);
+    }
 
+    @Test
+    @DisplayName("(4) * 40 / (7 * 5 / 10 * 6) + 2 = 10")
+    void t23() {
+        assertThat(Calc.run("(4) * 40 / (7 * 5 / 10 * 6) + 2")).isEqualTo(10);
+    }
+
+    @Test
+    @DisplayName("7 * 5 / 10 * 6 = 18")
+    void t24() {
+        assertThat(Calc.run("7 * 5 / 10 * 6")).isEqualTo(18);
+    }
+
+    @Test
+    @DisplayName("(10 + 20) * 3 == 90")
+    void t230() {
+        assertThat(Calc.run("(10 + 20) * 3")).isEqualTo(90);
+    }
+
+
+    @Test
+    @DisplayName("")
+    void t25() {
+//        assertThat(Calc.run("")).isEqualTo();
+    }
+
+    @Test
+    @DisplayName("")
+    void t26() {
+//        assertThat(Calc.run("")).isEqualTo();
+    }
+
+    @Test
+    @DisplayName("")
+    void t27() {
+//        assertThat(Calc.run("")).isEqualTo();
     }
 }
