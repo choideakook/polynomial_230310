@@ -154,20 +154,11 @@ class CalcTest {
 
 
     @Test
-    @DisplayName("")
-    void t25() {
-//        assertThat(Calc.run("")).isEqualTo();
+    @DisplayName("10 + (10 + 5) == 25")
+    void t240() {
+        assertThat(Calc.run("10 + (10 + 5)")).isEqualTo(25);
     }
 
-    @Test
-    @DisplayName("")
-    void t26() {
-//        assertThat(Calc.run("")).isEqualTo();
-    }
 
-    @Test
-    @DisplayName("")
-    void t27() {
-//        assertThat(Calc.run("")).isEqualTo();
-    }
+
 }

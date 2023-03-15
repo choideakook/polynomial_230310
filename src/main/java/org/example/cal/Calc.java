@@ -1,16 +1,12 @@
 package org.example.cal;
 
-import java.util.Stack;
-
 public class Calc {
 
-    public static int run(String exp) { //
+    //-- 사칙 연산 계산 로직 --//
+    public static int run(String exp) {
         int result = 0;
-
         exp = exp.replace("- ", "+ -");
-
         if (exp.contains("(")) exp = token(exp);
-
 
         String[] bits = exp.split(" \\+ ");
         for (int i = 0; i < bits.length; i++) {
@@ -26,6 +22,7 @@ public class Calc {
         return result;
     }
 
+    //-- 괄호 안의 수식 먼저 계산 --//
     private static String token(String exp) {
         StringBuilder sb = new StringBuilder(exp);
         int first = 0;
@@ -47,6 +44,18 @@ public class Calc {
         return exp;
     }
 
+    //-- 나눗셈 계센 --//
+    private static String division(String bits) {
+        String[] mul = bits.split(" / ");
+        int num = Integer.parseInt(mul[0]);
+
+        for (int j = 1; j < mul.length; j++)
+            num /= Integer.parseInt(mul[j]);
+
+        return String.valueOf(num);
+    }
+
+    //-- 곱셈 계산 --//
     private static String multiply(String bits) {
         String[] mul = bits.split(" \\* ");
         int num = 0;
@@ -65,17 +74,6 @@ public class Calc {
                 String division = division(num + " / " + split[1]);
                 num = Integer.parseInt(division);
             }
-        return String.valueOf(num);
-    }
-
-    private static String division(String bits) {
-        String[] mul = bits.split(" / ");
-        int num = Integer.parseInt(mul[0]);
-
-        for (int j = 1; j < mul.length; j++)
-            num /= Integer.parseInt(mul[j]);
-
-
         return String.valueOf(num);
     }
 
