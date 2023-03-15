@@ -111,20 +111,25 @@ class CalcTest {
     }
 
     @Test
-    @DisplayName("2 * (3 + 5)=")
+    @DisplayName("(10 + 20)= 30")
     void t19() {
-//        assertThat(Calc.run("")).isEqualTo();
+        assertThat(Calc.run("(10 + 20)")).isEqualTo(30);
     }
 
     @Test
-    @DisplayName("=")
+    @DisplayName("(20 + 30) * 4 + ((3 - 5) + 1) = 199")
     void t20() {
-//        assertThat(Calc.run("")).isEqualTo();
+        assertThat(Calc.run("(20 + 30) * 4 + ((3 - 5) + 1)")).isEqualTo(199);
     }
 
     @Test
-    @DisplayName("=")
+    @DisplayName("30 / (3 - 6 + ((5 + 7))) * 8 + (4) * 3 / (7 * 5 / 10 * 6) + 2 = 26")
     void t21() {
-//        assertThat(Calc.run("")).isEqualTo();
+        assertThat(Calc.run("30 / (3 - 6 + ((5 + 7))) * 8 + (4) * 3 / (7 * 5 / 10 * 6) + 2")).isEqualTo(26);
+    }
+
+    @Test
+    void name() {
+
     }
 }
